@@ -1,0 +1,108 @@
+.cont-container{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 90%;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   animation: fadeIn 2s;
+    width: 500px;
+    height: 100%;
+}
+
+.contact-form h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #D31818;
+}
+
+.contact-form input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+    border: 1px solid #D31818;
+    border-radius: 5px;
+    background-color: #141414;
+    transition: .2s ease-in-out;
+}
+
+.contact-form input:hover{
+    box-shadow: 0px 2px 10px 4px rgba(211,24,24,0.86);
+    transform: scale(1.02);
+}
+.contact-form input:focus{
+    box-shadow: 0px 2px 10px 4px rgba(211,24,24,0.86);
+    transform: scale(1.02);
+}
+
+
+
+.contact-form input::placeholder{
+    color: #7e7d7d;
+}
+
+.contact-form textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #D31818;
+    border-radius: 5px;
+    background-color: #141414;
+    transition: .2s ease-in-out;
+}
+
+.contact-form textarea:hover{
+    box-shadow: 0px 2px 10px 4px rgba(211,24,24,0.86);
+    transform: scale(1.02);
+}
+.contact-form textarea:focus{
+    box-shadow: 0px 2px 10px 4px rgba(211,24,24,0.86);
+    transform: scale(1.02);
+}
+
+.contact-form textarea::placeholder{
+    color: #7e7d7d;
+}
+
+.contact-form button{
+    width: 150px;
+    height: 40px;
+    background-color: #D31818;
+    border: none;
+    color: #fff;
+    border-radius: 5px ;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.contact-form button:hover{
+    background-color: #141414;
+    color: #D31818;
+    box-shadow: 0px 2px 10px 4px rgba(211,24,24,0.86);
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
