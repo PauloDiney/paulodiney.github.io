@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: linear-gradient(-45deg, #840000 3%, #6c0505 10%, #141414 26%, #1A1919 41%);
+    background: linear-gradient(-45deg, #840000 3%, #6c0505 10%, #141414 26%, #1A1919 51%);
     overflow-x: hidden;
     width: 100%;
 
@@ -156,6 +156,7 @@ body {
     flex-direction: column;
     justify-content: end;
     align-items: flex-start;
+    animation: up 2s;
 }
 
 .title-section h1 {
@@ -237,6 +238,7 @@ body {
     }
 }
 
+
 .waves-icon{
     display: flex;
     position: absolute;
@@ -244,6 +246,7 @@ body {
     height: 300px;
     justify-content: center;
     align-items: end;
+    animation: up 2s;
 }
 
 .waves-icon a{
@@ -253,6 +256,17 @@ body {
     text-decoration: none;
     color: #D31818;
     font-size: 30px;
+}
+
+/* Animation */
+
+@keyframes up{
+    0%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 
