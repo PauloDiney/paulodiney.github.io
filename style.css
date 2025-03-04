@@ -245,10 +245,11 @@ body {
 }
 
 .waves-icon a{
+    z-index: 1001;
     margin: 10px;
     padding: 10px;
     text-decoration: none;
-    color: #fff;
+    color: #D31818;
     font-size: 30px;
 }
 
