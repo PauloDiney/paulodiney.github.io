@@ -29,12 +29,11 @@
     </header>
     <main class="cont-container">
         <section class="contact">
-            <form action="" class="contact-form">
-                <h1>Contato</h1>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Seu Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
-                <button>Enviar</button>
+            <form class="contact-form">
+                <h1>Vamos fazer um projeto juntos? Mande uma menssagem :)</h1>
+                <input id="nome" type="text" placeholder="Nome" required>
+                <textarea id="mensagem" cols="30" rows="10" placeholder="Mensagem" required></textarea>
+                <button type="submit" onclick="sendEmail(event)">Enviar Mensagem</button>
             </form>
         </section>
         <section class="waves-container">
@@ -44,6 +43,8 @@
             <div class="wave wave4"></div>
         </section>   
     </main>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="../app.js"></script>
 </body>
 </html>
