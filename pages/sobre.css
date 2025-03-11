@@ -1,29 +1,25 @@
-
-
 .main-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-
-    
 }
 
 
 .about-container{
     margin-top: 20px;
-    width: 100%;
+    width: 90%; /* Ajuste a largura conforme necessário */
+    max-width: 800px; /* Define uma largura máxima para melhor controle */
+    height: auto; /* Ajusta a altura automaticamente */
     display: flex;
     flex-direction: column;
-   
 }
 
 .about-container h2{
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 10px;
     text-align: center;
     padding: 10px;
     color: #fff;
@@ -31,13 +27,13 @@
 }
 
 .about-container p{
-    font-size: 14px;
+    font-size: 1rem; /* Ajuste o tamanho da fonte conforme necessário */
     color: #fff;
     padding: 20px;
-    text-align: left;
-    letter-spacing: .1rem;
+    text-align: justify; /* Justifica o texto para melhor alinhamento */
     animation: text 1s ease-in-out;
-   
+    word-wrap: break-word; /* Permite a quebra de palavras longas */
+    line-height: 1.6; /* Ajusta o espaçamento entre linhas */
 }
 
 .about-container span{

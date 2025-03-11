@@ -2,9 +2,6 @@
 
 html {
     scroll-behavior: smooth;
-    height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 * {
@@ -16,6 +13,11 @@ html {
 
 body {
     background: linear-gradient(-45deg, #840000 3%, #6c0505 10%, #141414 26%, #1A1919 51%);
+    height: auto;
+    position: relative;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da janela */
+    display: flex;
+    flex-direction: column;
 }
 
 .container-header {
@@ -182,7 +184,7 @@ body {
    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 200px; 
+    height: 150px; 
  }
 
 .wave{
