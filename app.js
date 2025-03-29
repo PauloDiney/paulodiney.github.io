@@ -47,11 +47,30 @@ const items = document.querySelectorAll(".timeline-item");
 
 
     // Adiciona a funcionalidade do botão hamburger
-   // Adiciona a funcionalidade do botão hambúrguer
 const hamburger = document.getElementById('hamburger');
 const navList = document.getElementById('nav-list');
 
-// Adiciona o evento de clique para mostrar/ocultar o menu
 hamburger.addEventListener('click', () => {
-  navList.classList.toggle('active');
+  if (navList.classList.contains('active')) {
+    // Adiciona a classe de fechamento e remove a classe de ativo após a animação
+    navList.classList.add('closing');
+    navList.classList.remove('active');
+
+    // Remove a classe de fechamento após a animação terminar
+    navList.addEventListener(
+      'animationend',
+      () => {
+        navList.classList.remove('closing');
+        navList.style.display = 'none'; // Garante que o menu fique escondido
+      },
+      { once: true }
+    );
+  } else {
+    // Remove o estilo inline de display e adiciona a classe de ativo para abrir o menu
+    navList.style.display = 'flex';
+    navList.classList.add('active');
+  }
+
+  // Alterna o estado do botão hambúrguer
+  hamburger.classList.toggle('active');
 });
