@@ -51,26 +51,6 @@ const hamburger = document.getElementById('hamburger');
 const navList = document.getElementById('nav-list');
 
 hamburger.addEventListener('click', () => {
-  if (navList.classList.contains('active')) {
-    // Adiciona a classe de fechamento e remove a classe de ativo após a animação
-    navList.classList.add('closing');
-    navList.classList.remove('active');
-
-    // Remove a classe de fechamento após a animação terminar
-    navList.addEventListener(
-      'animationend',
-      () => {
-        navList.classList.remove('closing');
-        navList.style.display = 'none'; // Garante que o menu fique escondido
-      },
-      { once: true }
-    );
-  } else {
-    // Remove o estilo inline de display e adiciona a classe de ativo para abrir o menu
-    navList.style.display = 'flex';
-    navList.classList.add('active');
-  }
-
-  // Alterna o estado do botão hambúrguer
-  hamburger.classList.toggle('active');
+  hamburger.classList.toggle('active'); // Alterna o "X"
+  navList.classList.toggle('active'); // Mostra/esconde o menu
 });

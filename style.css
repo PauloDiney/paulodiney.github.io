@@ -11,6 +11,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
+  
 
 }
 
@@ -26,6 +27,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   
+  
 }
 
 .header-container {
@@ -39,6 +41,7 @@ body {
   z-index: 1000;
   background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+  
 }
 
 .nav_container {
@@ -48,6 +51,7 @@ body {
   width: 100%;
   max-width: 1200px;
   position: relative;
+  
 }
 
 .nav_container img {
@@ -94,14 +98,15 @@ body {
   display: none; /* Esconde o menu inicialmente */
   flex-direction: column;
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: 90%;
+  right: 10px;
   background-color: #141414;
   width: 100%;
   padding: 1rem 0;
   text-align: center;
   z-index: 1000;
-  transform: translateX(100%); /* Começa fora da tela */
+  transform: translate(0, -20px); /* Inicia fora da tela */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
 }
 
@@ -111,10 +116,7 @@ body {
   animation: slideIn 0.3s forwards; /* Aplica a animação de entrada */
 }
 
-/* Quando o menu está sendo fechado */
-.nav_list.closing {
-  animation: slideOut 0.3s forwards; /* Aplica a animação de saída */
-}
+
 
 .nav_item {
   list-style: none;
@@ -880,7 +882,7 @@ body {
 /* Animação para aparecer da direita para a esquerda */
 @keyframes slideIn {
   from {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
@@ -890,16 +892,6 @@ body {
 }
 
 /* Animação para desaparecer da esquerda para a direita */
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
 
 /* Media Queries para responsividade */
 
