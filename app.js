@@ -20,3 +20,38 @@ function sendEmail(event) {
 
     window.open(link, '_blank');
 }
+
+const items = document.querySelectorAll(".timeline-item");
+
+    const revealItems = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        
+        items.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+
+            // Mostrar o item quando ele entrar na tela
+            if(itemTop < triggerBottom && itemBottom >= 0) {
+                item.classList.add("show");
+                item.classList.remove("hide");
+            } else {
+                // Ocultar o item quando ele sair da tela
+                item.classList.remove("show");
+                item.classList.add("hide");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealItems);
+    revealItems();
+
+
+    // Adiciona a funcionalidade do botão hamburger
+   // Adiciona a funcionalidade do botão hambúrguer
+const hamburger = document.getElementById('hamburger');
+const navList = document.getElementById('nav-list');
+
+// Adiciona o evento de clique para mostrar/ocultar o menu
+hamburger.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});

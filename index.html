@@ -1,62 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta translate="no" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta translate="no">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
     <title>Paulo Diney</title>
-</head>
+  </head>
 
-<body>
-    <header class="container-header">
-        <nav class="nav-container">
-            <a href="index.html"><img class="nav-logo" src="./img/logo.png" alt=""></a>
-            <ul class="nav-menu">
-                <li><a href="./pages/sobre.html">Sobre</a></li>
-                <li><a href="./pages/portifolio.html">Portifólio</a></li>
-                <li><a href="./pages/contato.html">Contato</a></li>
-            </ul>
-            <button class="nav-toggle">
-                <span></span>
-            </button>
-        </nav>
+  <body>
+    <header id="home"  class="header-container">
+      <nav class="nav_container">
+        <a href="#home"><img src="./img/logo.png" alt="Logo" class="logo" /></a>
+        
+      
+        <button class="button-abrir">
+          <span></span>
+        </button>
+      
+        <ul class="nav_list" id="nav-list">
+          <li class="nav_item">
+            <a href="#sobre">
+              Jornada
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#projeto">
+              Projetos
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#contact">
+              Contact
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li class="button-menu">
+            <span></span>
+        </li>
+        </ul>
+      </nav>
+      
+      
     </header>
-    <main class="container-main">
-        <section class="title-section">
-            <h1>Paulo Diney</h1>
-            <p>&lt;Front-End Devoleper/&gt;</p>
-        </section>
+    
+    <main class="main-container">
+      <section class="hero_banner">
+        <div class="hero_info">
+          <div class="hero_img">
+            <img src="./img/eu.jpg" alt="Hero Image" class="hero_image" />
+          </div>
+          <div class="hero_text">
+            <h1 class="hero_title">Bem vindo ao meu <span>portifólio</span></h1>
+            <h2>Sobre Mim</h2>
+            <p>
+              Sou <span>Paulo Diney</span> , desenvolvedor em formação e apaixonado por tecnologia. Curso Análise e Desenvolvimento de Sistemas na Fatec Presidente Prudente e sou estagiário em assistência técnica de informática. Estou iniciando como desenvolvedor front-end freelance, criando interfaces responsivas com HTML, CSS, JavaScript e React. Tenho experiência em desenvolvimento de jogos (Unity, Construct 3D) e interesse em metodologias ágeis, Git/GitHub e computação em nuvem.
+            </p>
+            <div class="hero_social">
+              <ul class="list_social">
+                <li>
+                  <a target="_blank" href="https://www.instagram.com/paulodiney/?next=%2F">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
 
-        <section class="waves-container">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-            <div class="wave wave4"></div>
+                <li>
+                    <a target="_blank" href="https://github.com/PauloDiney">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
 
-            <section class="waves-icon">
-                <a href="https://github.com/PauloDiney" target="_blank">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
+                <li>
+                  <a target="_blank" href="https://www.linkedin.com/in/paulodiney/">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <a href="https://www.linkedin.com/in/paulodiney/" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
+      <section id="sobre" class="abaout_container">
+        <div class="jorney_container">
+          <h2 class="jorney_title">Minha Jornada</h2>
+          <div  class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2021 - 2023</h2>
+                    <p>Curso Técnico em Desenvolvimento de Sistemas pela ETEC integrado ao ensino médio.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2022</h2>
+                    <p>Implantação de Serviços em Nuvem no Google Cloud - Senai.</p>
+                    <p>Implantação de IA em Nuvem no Google Cloud - Senai.</p>
+                    <p>Inglês Wiszard desde 2022</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2023</h2>
+                    <p>TCC - DescomPlicars</p>
+                </div>
+            </div>
+        
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2024</h2>
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas na Fatec de Presidente Prudente.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2025 - Presente</h2>
+                    <p>Premiação no V SIPEC - Projeto Integrador com nota máxima e certificado de mérito acadêmico.</p>
+                    <p>Estágio em Desenvolvimento de Sistemas na Fatec de Presidente Prudente.</p>
+                    <p>Desenvolvedor Front-End Freelancer.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+      </section>
 
-                <a href="https://www.instagram.com/paulodiney/" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
 
-            </section>
-        </section>
+      <section class="skills_container">
+        <h2 class="skills_title">Minhas Habilidades</h2>
+        <div class="skills_list">
+          <div class="skill_item">
+            <i class="fa-brands fa-html5"></i>
+            <p>HTML</p>
+        </div>
+        <div class="skill_item">
+            <i class="fa-brands fa-css3-alt"></i>
+            <p>CSS</p>
+        </div>
+        <div class="skill_item">
+            <i class="fa-brands fa-js-square"></i>
+            <p>JavaScript</p>
+        </div>
+        <div class="skill_item">
+            <i class="fa-brands fa-react"></i>
+            <p>React</p>
+        </div>
+        <div class="skill_item">
+          <i class="fa-brands fa-git-alt"></i>
+            <p>Git</p>
+        </div>
+        <div class="skill_item">
+          <i class="fa-brands fa-laravel"></i>
+            <p>Laravel</p>
+        </div>
+        <div class="skill_item">
+          <i class="fa-brands fa-bootstrap"></i>
+            <p>Bootstrap</p>
+        </div>
+        <div class="skill_item">
+          <i class="fa-brands fa-figma"></i>
+            <p>Figma</p>
+        </div>
+        <div class="skill_item">
+          <i class="fa-brands fa-php"></i>
+            <p>PHP</p>
+        </div>
+      </section>
+
+
+      <section id="projeto" class="projetos_container">
+        <h2 class="projetos_title">Meus Projetos</h2>
+        <div class="projetos_list">
+          <div class="projeto_item">
+            <img src="./img/transfomers.png" alt="Projeto 1" />
+            <h3>Transformers</h3>
+            <p>O meu primeiro projeto com reponsividade</p>
+            <a target="_blank" href="https://transfomers.netlify.app">Ver mais</a>
+            <a target="_blank" href="https://github.com/PauloDiney/TransformersRespon">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div class="projeto_item">
+            <img src="./img/sucobacaco.png" alt="Projeto 2" />
+            <h3>Suco bagaço</h3>
+            <span>Em Desenvolvimento</span>
+            <p>Projeto em desenvolvimento!!!</p>
+            <a target="_blank"  href="https://sucobagaco.netlify.app">Ver mais</a>
+            <a target="_blank" href="https://github.com/PauloDiney/SucoBagaco">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div class="projeto_item">
+            <img src="./img/mainline.png" alt="Projeto 3" />
+            <h3>Mainline</h3>
+            <p>Meu primeiro trabalho como freelance, desenvolvido para mobile</p>
+            <a target="_blank" href="https://mainli.netlify.app">Ver site</a>
+            <a target="_blank" href="https://github.com/PauloDiney/MA.INLINE">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div class="projeto_item">
+            <img src="./img/instagram.png" alt="Projeto 4" />
+            <h3>Clone instagram</h3>
+            <p>Clonei a pagina de login do instagram!</p>
+            <a target="_blank" href="pauloinstaclone.netlify.app">Ver site</a>
+            <a target="_blank" href="https://github.com/PauloDiney/Clone-instagram>"
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div class="projeto_item">
+            <img src="./img/bookstyle.png" alt="Projeto 5" />
+            <h3>bookstyle</h3>
+            <p>Projeto de faculdade, onde eu e meu parceiro estamos desenvolvendo um site de vendas de livros</p>
+            <a target="_blank" href="https://github.com/M3NT0Sz/BookStyle"
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contato_container">
+        <h2 class="contato_title">Vamos fazer um projeto juntos? Mande uma menssagem :)</h2>
+        <div class="contato_info">
+          <div class="info_item">
+            <i class="fa fa-envelope"></i>
+            <p>Email: <a href="mailto:contato@seudominio.com">paulo19martin@gmail.com</a></p>
+          </div>
+
+        </div>
+      
+        <form action="#" method="POST" class="contato_form">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      
+          <button type="submit" onclick="sendEmail(event)">Enviar Mensagem</button>
+        </form>
+      </section>
+
+      <footer class="footer_container">
+        <div class="footer_bottom">
+            <p>&copy; 2025 Paulo Diney. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
     </main>
     <script src="app.js"></script>
-</body>
 
+    <a class="btn_back" href="#home">^</a>
+  </body>
 </html>
