@@ -15,6 +15,11 @@ function sendEmail(event) {
     const email = document.getElementById('mensagem');
     const telefone = '5518981104236';
 
+    if (!nome.value.trim() || !email.value.trim()) {
+        alert('Por favor, preencha todos os campos antes de enviar.');
+        return;
+    }
+
     const texto = `Olá, meu nome é ${nome.value}, gostaria de saber mais sobre seus serviços ${email.value}.`;
     const link = `https://api.whatsapp.com/send?phone=${telefone}&text=${texto}`;
 
