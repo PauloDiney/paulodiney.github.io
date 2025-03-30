@@ -67,10 +67,12 @@ body {
     width: 50%;
     max-width: 600px;
     font-size: 1.8rem;
+    position: relative;
 }
 
+
 .nav_list_2 a{
-    position: relative;
+  position: relative;
   color: #d40d0d;
   width: 100px;
   height: 40px;
@@ -82,18 +84,54 @@ body {
   box-sizing: border-box;
 }
 
+.nav_item_2 span{
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #e80202;
+  z-index: -1;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.5s;
+  
+}
+
+.nav_item_2 a:hover span {
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
+
+
+.nav_item_2 a:hover span:nth-child(1) {
+  left: 0;
+  transition-delay: 0s;
+}
+.nav_item_2 a:hover span:nth-child(2) {
+  left: 25%;
+  transition-delay: 0.1s;
+}
+.nav_item_2 a:hover span:nth-child(3) {
+  left: 50%;
+  transition-delay: 0.2s;
+}
+.nav_item_2 a:hover span:nth-child(4) {
+  left: 75%;
+  transition-delay: 0.3s;
+}
+
 .nav_list_2 a:hover {
   color: #fafafa;
 }
 
 .nav_item_2{
-    list-style: none;
+  list-style: none;
   position: relative;
   border-radius: 3px;
   overflow: hidden;
 }
 
 /* Estilo inicial do menu */
+
 .nav_list {
   display: none; /* Esconde o menu inicialmente */
   flex-direction: column;
@@ -125,29 +163,6 @@ body {
   overflow: hidden;
 }
 
-.nav_item span {
-  position: absolute;
-  width: 25%;
-  height: 100%;
-  background-color: #e80202;
-  z-index: -1;
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 0.5s;
-}
-
-.nav_list a {
-  position: relative;
-  color: #d40d0d;
-  width: 100px;
-  height: 40px;
-  text-decoration: none;
-  display: block;
-  line-height: 40px;
-  text-align: center;
-  transition: 0.5s;
-  box-sizing: border-box;
-}
 
 /* Estilo dos links */
 .nav_item a {
@@ -156,39 +171,6 @@ body {
   padding: 1rem;
   display: block;
   transition: color 0.3s;
-}
-
-.nav_item a:hover {
-  color: #ff5959;
-}
-
-.nav_list a:hover {
-  color: rgb(255, 255, 255);
-}
-
-.nav_item a:hover span {
-  transform-origin: bottom;
-  transform: scaleY(1);
-}
-
-.nav_item a span:nth-child(1) {
-  left: 0;
-  transition-delay: 0s;
-}
-
-.nav_item a span:nth-child(2) {
-  left: 25%;
-  transition-delay: 0.1s;
-}
-
-.nav_item a span:nth-child(3) {
-  left: 50%;
-  transition-delay: 0.2s;
-}
-
-.nav_item a span:nth-child(4) {
-  left: 75%;
-  transition-delay: 0.3s;
 }
 
 /* Estilo do botão hambúrguer */
@@ -316,7 +298,7 @@ body {
 }
 
 .hero_text h2 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #ababab;
   opacity: 0.7;
   margin: 1rem 0;
