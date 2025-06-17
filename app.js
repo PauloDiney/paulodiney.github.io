@@ -35,4 +35,25 @@ document.addEventListener('DOMContentLoaded', function () {
             navList.classList.remove('show');
         });
     });
+
+    // Botão voltar ao topo animado
+    const btnBack = document.createElement('a');
+    btnBack.className = 'btn_back';
+    btnBack.href = '#home';
+    btnBack.innerHTML = '^';
+    document.body.appendChild(btnBack);
+
+    let lastScrollY = 0;
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 200) {
+            btnBack.classList.add('show');
+            btnBack.classList.remove('hide');
+        } else {
+            if (btnBack.classList.contains('show')) {
+                btnBack.classList.remove('show');
+                btnBack.classList.add('hide');
+            }
+        }
+        lastScrollY = window.scrollY;
+    });
 });
