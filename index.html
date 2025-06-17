@@ -29,100 +29,75 @@
   </head>
 
   <body>
-    <header id="home" class="header-container">
-      <nav class="nav_container">
-        <a href="#home"><img src="./img/logo.png" alt="Logo" class="logo" /></a>
-        
-        <!-- Botão hambúrguer -->
-        <button class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        
-
-        
-        <ul class="nav_list" id="nav-list">
-          <li class="nav_item">
-            <a href="#sobre">Jornada</a>
-          </li>
-          <li class="nav_item">
-            <a href="#projeto">Projetos</a>
-          </li>
-          <li class="nav_item">
-            <a href="#contact">Contato</a>
-          </li>
-        </ul>
-
-
-        <ul class="nav_list_2" id="nav-list">
-          <li class="nav_item_2">
-            <a href="#sobre">
-              Jornada
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li class="nav_item_2">
-            <a href="#projeto">
-              Projetos
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li class="nav_item_2">
-            <a href="#contact">
-              Contato
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <header class="header-container">
+        <nav class="nav_container">
+            <img src="./img/logo.png" alt="Logo" class="logo">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav_list" id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Jornada</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main class="main-container">
-      <section class="hero_banner">
-        <div class="hero_info">
-          <div class="hero_img">
-            <img src="./img/eu.jpg" alt="Hero Image" class="hero_image" />
-          </div>
-          <div class="hero_text">
-            <h1 class="hero_title">Bem vindo ao meu <span>portifólio</span></h1>
-            <h2><code>&lt;Desenvolvedor Front-End/&gt;</code></h2>
-            <p>
-              Sou <span>Paulo Diney</span> , desenvolvedor em formação e apaixonado por tecnologia. Curso Análise e Desenvolvimento de Sistemas na Fatec Presidente Prudente e sou estagiário em assistência técnica de informática. Estou iniciando como desenvolvedor front-end freelance, criando interfaces responsivas com HTML, CSS, JavaScript e React. Tenho experiência em desenvolvimento de jogos (Unity, Construct 3D) e interesse em metodologias ágeis, Git/GitHub e computação em nuvem.
+
+    <section class="hero_banner" id="home">
+        
+
+        <div class="hero_content">
+            <p class="hero_greeting">👋 Olá, eu sou</p>
+            
+            <h1 class="hero_title">Paulo Diney</h1>
+            
+            <h2 class="hero_subtitle">
+                Desenvolvedor <span class="hero_highlight">Front-End</span>
+            </h2>
+            
+            <p class="hero_description">
+                Transformo ideias em experiências digitais incríveis. 
+                Especializado em criar interfaces modernas, responsivas e intuitivas 
+                que conectam pessoas e tecnologia de forma elegante.
             </p>
-            <div class="hero_social">
-              <ul class="list_social">
-                <li>
-                  <a target="_blank" href="https://www.instagram.com/paulodiney/?next=%2F">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
 
-                <li>
-                    <a target="_blank" href="https://github.com/PauloDiney">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-
-                <li>
-                  <a target="_blank" href="https://www.linkedin.com/in/paulodiney/">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-              </ul>
+            <div class="hero_tech_stack">
+                <span class="tech_item">HTML</span>
+                <span class="tech_item">CSS</span>
+                <span class="tech_item">JavaScript</span>
+                <span class="tech_item">React</span>
+                <span class="tech_item">Laravel</span>
             </div>
-          </div>
-        </div>
-      </section>
 
+            <div class="hero_cta_group">
+                <a href="#projetos" class="hero_cta primary">
+                    Ver Meus Projetos
+                </a>
+                <a href="#contato" class="hero_cta secondary">
+                    Entrar em Contato
+                </a>
+            </div>
+
+            <div class="hero_social">
+                <a href="https://github.com/PauloDiney" class="social_link" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/paulodiney/" class="social_link" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/paulodiney/" class="social_link" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+       
+    </section>
+
+    <main class="main-container">
       <section id="sobre" class="abaout_container">
         <div class="jorney_container">
           <h2 class="jorney_title">Minha Jornada</h2>
@@ -133,7 +108,6 @@
                     <p>Curso Técnico em Desenvolvimento de Sistemas pela ETEC integrado ao ensino médio.</p>
                 </div>
             </div>
-            
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h2>2022</h2>
@@ -142,21 +116,18 @@
                     <p>Inglês Wiszard desde 2022</p>
                 </div>
             </div>
-            
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h2>2023</h2>
                     <p>TCC - DescomPlicars</p>
                 </div>
             </div>
-        
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h2>2024</h2>
                     <p>Estudante de Análise e Desenvolvimento de Sistemas na Fatec de Presidente Prudente.</p>
                 </div>
             </div>
-            
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h2>2025 - Presente</h2>
@@ -168,7 +139,6 @@
         </div>
         </div>
       </section>
-
 
       <section class="skills_container">
         <h2 class="skills_title">Minhas Habilidades</h2>
@@ -211,8 +181,7 @@
         </div>
       </section>
 
-
-      <section id="projeto" class="projetos_container">
+      <section id="projetos" class="projetos_container">
         <h2 class="projetos_title">Meus Projetos</h2>
         <div class="projetos_list">
           <div class="projeto_item">
@@ -272,23 +241,19 @@
         </div>
       </section>
 
-      <section id="contact" class="contato_container">
+      <section id="contato" class="contato_container">
         <h2 class="contato_title">Vamos fazer um projeto juntos? Mande uma menssagem :)</h2>
         <div class="contato_info">
           <div class="info_item">
             <i class="fa fa-envelope"></i>
             <p>Email: <a href="mailto:contato@seudominio.com">paulo19martin@gmail.com</a></p>
           </div>
-
         </div>
-      
         <form action="#" method="POST" class="contato_form">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-      
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-      
           <button type="submit" onclick="sendEmail(event)">Enviar Mensagem</button>
         </form>
       </section>
@@ -297,11 +262,9 @@
         <div class="footer_bottom">
             <p>&copy; 2025 Paulo Diney. Todos os direitos reservados.</p>
         </div>
-    </footer>
-    
+      </footer>
     </main>
     <script src="app.js"></script>
-
     <a class="btn_back" href="#home">^</a>
   </body>
 </html>

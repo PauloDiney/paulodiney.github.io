@@ -1,61 +1,38 @@
-$(document).ready(function () {
-    $('.nav-toggle').click(function () {
-        $('.nav-menu').toggleClass('active');
-        $('.nav-toggle').toggleClass('toggle');
-        $('container-header').toggleClass('blur');
+document.addEventListener('DOMContentLoaded', function () {
+    // Adiciona efeito de parallax suave nos elementos flutuantes
+    window.addEventListener('scroll', function () {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelectorAll('.floating_element');
+        const speed = 0.5;
+
+        for (let i = 0; i < parallax.length; i++) {
+            const yPos = -(scrolled * speed);
+            parallax[i].style.transform = `translateY(${yPos}px)`;
+        }
     });
-});
 
+    // Header transparente/opaco baseado no scroll
+    const header = document.querySelector('.header-container');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(10, 10, 10, 0.98)';
+        } else {
+            header.style.background = 'rgba(10, 10, 10, 0.95)';
+        }
+    });
 
-
-
-function sendEmail(event) {
-    event.preventDefault();
-    const nome = document.getElementById('nome');
-    const email = document.getElementById('mensagem');
-    const telefone = '5518981104236';
-
-    if (!nome.value.trim() || !email.value.trim()) {
-        alert('Por favor, preencha todos os campos antes de enviar.');
-        return;
-    }
-
-    const texto = `Olá, meu nome é ${nome.value}, gostaria de saber mais sobre seus serviços ${email.value}.`;
-    const link = `https://api.whatsapp.com/send?phone=${telefone}&text=${texto}`;
-
-    window.open(link, '_blank');
-}
-
-const items = document.querySelectorAll(".timeline-item");
-
-    const revealItems = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        
-        items.forEach(item => {
-            const itemTop = item.getBoundingClientRect().top;
-            const itemBottom = item.getBoundingClientRect().bottom;
-
-            // Mostrar o item quando ele entrar na tela
-            if(itemTop < triggerBottom && itemBottom >= 0) {
-                item.classList.add("show");
-                item.classList.remove("hide");
-            } else {
-                // Ocultar o item quando ele sair da tela
-                item.classList.remove("show");
-                item.classList.add("hide");
-            }
+    // HAMBURGER MENU
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navList.classList.toggle('show');
+    });
+    // Fecha o menu ao clicar em um link
+    document.querySelectorAll('.nav_list a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navList.classList.remove('show');
         });
-    }
-
-    window.addEventListener("scroll", revealItems);
-    revealItems();
-
-
-    // Adiciona a funcionalidade do botão hamburger
-const hamburger = document.getElementById('hamburger');
-const navList = document.getElementById('nav-list');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active'); // Alterna o "X"
-  navList.classList.toggle('active'); // Mostra/esconde o menu
+    });
 });
