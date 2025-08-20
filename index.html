@@ -30,29 +30,51 @@
 
   <body>
     <header class="header-container">
-        <img src="./img/logo.png" alt="Logo" class="logo">
-        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav class="nav_container">
-            <ul class="nav_list" id="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Jornada</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="./img/logo.png" alt="Paulo Diney Logo" class="logo">
+                <span class="logo-text">Paulo Diney</span>
+            </div>
+            
+            <nav class="nav_container">
+                <ul class="nav_list" id="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#sobre" class="nav-link">Jornada</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-overlay" id="nav-overlay"></div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </header>
 
     <section class="hero_banner" id="home">
-        
+        <div class="hero_background">
+            <div class="hero_particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
 
         <div class="hero_content">
-            <p class="hero_greeting">👋 Olá, eu sou</p>
+            <div class="hero_greeting">
+                <span class="greeting-emoji">👋</span>
+                <span class="greeting-text">Olá, eu sou</span>
+            </div>
             
-            <h1 class="hero_title">Paulo Diney</h1>
+            <h1 class="hero_title">
+                Paulo <span class="title-highlight">Diney</span>
+            </h1>
             
             <h2 class="hero_subtitle">
                 Desenvolvedor <span class="hero_highlight">Front-End</span>
@@ -65,18 +87,23 @@
             </p>
 
             <div class="hero_tech_stack">
-                <span class="tech_item">HTML</span>
-                <span class="tech_item">CSS</span>
+                <span class="tech_item">HTML5</span>
+                <span class="tech_item">CSS3</span>
                 <span class="tech_item">JavaScript</span>
                 <span class="tech_item">React</span>
+                <span class="tech_item">Figma</span>
+                <span class="tech_item">UI/UX</span>
                 <span class="tech_item">Laravel</span>
+                <span class="tech_item">PHP</span>
             </div>
 
             <div class="hero_cta_group">
                 <a href="#projetos" class="hero_cta primary">
+                    <i class="fas fa-code"></i>
                     Ver Meus Projetos
                 </a>
                 <a href="#contato" class="hero_cta secondary">
+                    <i class="fas fa-envelope"></i>
                     Entrar em Contato
                 </a>
             </div>
@@ -94,177 +121,742 @@
             </div>
         </div>
 
-       
+        <div class="scroll_indicator">
+            <span class="scroll_text">Scroll Down</span>
+            <div class="scroll_arrow"></div>
+        </div>
     </section>
 
     <main class="main-container">
-      <section id="sobre" class="abaout_container">
-        <div class="jorney_container">
-          <h2 class="jorney_title">Minha Jornada</h2>
-          <div  class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h2>2021 - 2023</h2>
-                    <p>Curso Técnico em Desenvolvimento de Sistemas pela ETEC integrado ao ensino médio.</p>
+      <section id="sobre" class="journey_section">
+        <div class="journey_container">
+          <div class="journey_header">
+            <h2 class="journey_title">Minha Jornada Profissional</h2>
+            <p class="journey_subtitle">
+              Uma caminhada constante de aprendizado e evolução no mundo da tecnologia
+            </p>
+          </div>
+
+          <div class="timeline_wrapper">
+            <div class="timeline">
+              <div class="timeline-item" data-year="2021-2023">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
                 </div>
-            </div>
-            <div class="timeline-item">
                 <div class="timeline-content">
-                    <h2>2022</h2>
-                    <p>Implantação de Serviços em Nuvem no Google Cloud - Senai.</p>
-                    <p>Implantação de IA em Nuvem no Google Cloud - Senai.</p>
-                    <p>Inglês Wiszard desde 2022</p>
+                  <div class="timeline-year">2021 - 2023</div>
+                  <h3 class="timeline-title">Curso Técnico em Desenvolvimento de Sistemas</h3>
+                  <p class="timeline-description">
+                    ETEC integrado ao ensino médio. Primeiro contato profissional com programação, 
+                    aprendendo fundamentos de lógica, algoritmos e desenvolvimento web.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">HTML</span>
+                    <span class="timeline-tag">CSS</span>
+                    <span class="timeline-tag">JavaScript</span>
+                    <span class="timeline-tag">PHP</span>
+                  </div>
                 </div>
-            </div>
-            <div class="timeline-item">
+              </div>
+
+              <div class="timeline-item" data-year="2022">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
                 <div class="timeline-content">
-                    <h2>2023</h2>
-                    <p>TCC - DescomPlicars</p>
+                  <div class="timeline-year">2022</div>
+                  <h3 class="timeline-title">Especialização em Cloud Computing</h3>
+                  <p class="timeline-description">
+                    Certificações em Google Cloud Platform pelo SENAI, focando em serviços de nuvem 
+                    e inteligência artificial. Início dos estudos de inglês no Wiszard.
+                  </p>
+                  <div class="timeline-achievements">
+                    <div class="achievement">
+                      <i class="fas fa-certificate"></i>
+                      <span>Implantação de Serviços em Nuvem</span>
+                    </div>
+                    <div class="achievement">
+                      <i class="fas fa-robot"></i>
+                      <span>Implantação de IA em Nuvem</span>
+                    </div>
+                    <div class="achievement">
+                      <i class="fas fa-language"></i>
+                      <span>Inglês Técnico</span>
+                    </div>
+                  </div>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">Google Cloud</span>
+                    <span class="timeline-tag">AI/ML</span>
+                    <span class="timeline-tag">English</span>
+                  </div>
                 </div>
-            </div>
-            <div class="timeline-item">
+              </div>
+
+              <div class="timeline-item" data-year="2023">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
                 <div class="timeline-content">
-                    <h2>2024</h2>
-                    <p>Estudante de Análise e Desenvolvimento de Sistemas na Fatec de Presidente Prudente.</p>
+                  <div class="timeline-year">2023</div>
+                  <h3 class="timeline-title">Projeto de Conclusão - DescomPlicars</h3>
+                  <p class="timeline-description">
+                    Desenvolvimento do TCC focado em uma aplicação web para simplificar processos. 
+                    Primeira experiência completa com desenvolvimento full-stack.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">Full-Stack</span>
+                    <span class="timeline-tag">Laravel</span>
+                    <span class="timeline-tag">MySQL</span>
+                  </div>
                 </div>
-            </div>
-            <div class="timeline-item">
+              </div>
+
+              <div class="timeline-item" data-year="2024">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
                 <div class="timeline-content">
-                    <h2>2025 - Presente</h2>
-                    <p>Premiação no V SIPEC - Projeto Integrador com nota máxima e certificado de mérito acadêmico.</p>
-                    <p>Estágio em Desenvolvimento de Sistemas na Fatec de Presidente Prudente.</p>
-                    <p>Desenvolvedor Front-End Freelancer.</p>
+                  <div class="timeline-year">2024</div>
+                  <h3 class="timeline-title">Análise e Desenvolvimento de Sistemas</h3>
+                  <p class="timeline-description">
+                    Ingresso na FATEC de Presidente Prudente. Aprofundamento em desenvolvimento 
+                    de software, metodologias ágeis e arquitetura de sistemas.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag">Engenharia de Software</span>
+                    <span class="timeline-tag">Scrum</span>
+                    <span class="timeline-tag">React</span>
+                  </div>
                 </div>
+              </div>
+
+              <div class="timeline-item current" data-year="2025">
+                <div class="timeline-marker">
+                  <div class="timeline-dot current"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="timeline-year">2025 - Presente</div>
+                  <h3 class="timeline-title">Conquistas e Experiência Profissional</h3>
+                  <p class="timeline-description">
+                    Premiação no V SIPEC com projeto integrador, início do estágio em desenvolvimento 
+                    e trabalhos como freelancer front-end.
+                  </p>
+                  <div class="timeline-achievements">
+                    <div class="achievement">
+                      <i class="fas fa-award"></i>
+                      <span>Premiação V SIPEC - Nota Máxima</span>
+                    </div>
+                    <div class="achievement">
+                      <i class="fas fa-briefcase"></i>
+                      <span>Estágio em Desenvolvimento</span>
+                    </div>
+                    <div class="achievement">
+                      <i class="fas fa-laptop-code"></i>
+                      <span>Desenvolvedor Front-End Freelancer</span>
+                    </div>
+                  </div>
+                  <div class="timeline-tags">
+                    <span class="timeline-tag current">Trabalhando Atualmente</span>
+                    <span class="timeline-tag">React</span>
+                    <span class="timeline-tag">TypeScript</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
         </div>
       </section>
 
-      <section class="skills_container">
-        <h2 class="skills_title">Minhas Habilidades</h2>
-        <div class="skills_list">
-          <div class="skill_item">
-            <i class="fa-brands fa-html5"></i>
-            <p>HTML</p>
-        </div>
-        <div class="skill_item">
-            <i class="fa-brands fa-css3-alt"></i>
-            <p>CSS</p>
-        </div>
-        <div class="skill_item">
-            <i class="fa-brands fa-js-square"></i>
-            <p>JavaScript</p>
-        </div>
-        <div class="skill_item">
-            <i class="fa-brands fa-react"></i>
-            <p>React</p>
-        </div>
-        <div class="skill_item">
-          <i class="fa-brands fa-git-alt"></i>
-            <p>Git</p>
-        </div>
-        <div class="skill_item">
-          <i class="fa-brands fa-laravel"></i>
-            <p>Laravel</p>
-        </div>
-        <div class="skill_item">
-          <i class="fa-brands fa-bootstrap"></i>
-            <p>Bootstrap</p>
-        </div>
-        <div class="skill_item">
-          <i class="fa-brands fa-figma"></i>
-            <p>Figma</p>
-        </div>
-        <div class="skill_item">
-          <i class="fa-brands fa-php"></i>
-            <p>PHP</p>
+      <section id="skills" class="skills_section">
+        <div class="skills_container">
+          <div class="skills_header">
+            <h2 class="skills_title">Minhas Habilidades</h2>
+            <p class="skills_subtitle">
+              Tecnologias e ferramentas que domino para criar experiências digitais incríveis
+            </p>
+          </div>
+          
+          <div class="skills_categories">
+            <!-- Frontend -->
+            <div class="skill_category">
+              <div class="category_header">
+                <i class="fas fa-code"></i>
+                <h3>Frontend</h3>
+              </div>
+              <div class="skills_grid">
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-html5"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>HTML5</h4>
+                    <p>Markup semântico e acessível</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 95%"></div>
+                      </div>
+                      <span>Avançado</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>CSS3</h4>
+                    <p>Styling moderno e responsivo</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 90%"></div>
+                      </div>
+                      <span>Avançado</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-js-square"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>JavaScript</h4>
+                    <p>ES6+ e programação funcional</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 85%"></div>
+                      </div>
+                      <span>Intermediário+</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-react"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>React</h4>
+                    <p>Componentes e hooks modernos</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 80%"></div>
+                      </div>
+                      <span>Intermediário+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Backend -->
+            <div class="skill_category">
+              <div class="category_header">
+                <i class="fas fa-server"></i>
+                <h3>Backend</h3>
+              </div>
+              <div class="skills_grid">
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-php"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>PHP</h4>
+                    <p>Desenvolvimento server-side</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 75%"></div>
+                      </div>
+                      <span>Intermediário</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-laravel"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>Laravel</h4>
+                    <p>Framework PHP moderno</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 70%"></div>
+                      </div>
+                      <span>Intermediário</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Ferramentas -->
+            <div class="skill_category">
+              <div class="category_header">
+                <i class="fas fa-tools"></i>
+                <h3>Ferramentas</h3>
+              </div>
+              <div class="skills_grid">
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-git-alt"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>Git</h4>
+                    <p>Controle de versão</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 85%"></div>
+                      </div>
+                      <span>Intermediário+</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-figma"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>Figma</h4>
+                    <p>Design e prototipagem</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 80%"></div>
+                      </div>
+                      <span>Intermediário+</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill_item">
+                  <div class="skill_icon">
+                    <i class="fab fa-bootstrap"></i>
+                  </div>
+                  <div class="skill_info">
+                    <h4>Bootstrap</h4>
+                    <p>Framework CSS</p>
+                    <div class="skill_level">
+                      <div class="level_bar">
+                        <div class="level_fill" style="width: 90%"></div>
+                      </div>
+                      <span>Avançado</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="projetos" class="projetos_container">
-        <h2 class="projetos_title">Meus Projetos</h2>
-        <div class="projetos_list">
-          <div class="projeto_item">
-            <img src="./img/transfomers.png" alt="Projeto 1" />
-            <h3>Transformers</h3>
-            <p>O meu primeiro projeto com reponsividade</p>
-            <a target="_blank" href="https://transfomers.netlify.app">Ver mais</a>
-            <a target="_blank" href="https://github.com/PauloDiney/TransformersRespon">
-              <i class="fa-brands fa-github"></i>
-            </a>
+      <section id="projetos" class="projects_section">
+        <div class="projects_container">
+          <div class="projects_header">
+            <h2 class="projects_title">Meus Projetos</h2>
+            <p class="projects_subtitle">
+              Seleção dos trabalhos que mais demonstram minha evolução e habilidades técnicas
+            </p>
           </div>
-          <div class="projeto_item">
-            <img src="./img/sucobacaco.png" alt="Projeto 2" />
-            <h3>Suco bagaço</h3>
-            <span>Em Desenvolvimento</span>
-            <p>Projeto em desenvolvimento!!!</p>
-            <a target="_blank"  href="https://sucobagaco.netlify.app">Ver mais</a>
-            <a target="_blank" href="https://github.com/PauloDiney/SucoBagaco">
-              <i class="fa-brands fa-github"></i>
-            </a>
+          
+          <div class="projects_grid">
+            <div class="project_card featured">
+              <div class="project_image">
+                <img src="./img/danca.png" alt="Clara's Dance Studio" />
+                <div class="project_overlay">
+                  <div class="project_links">
+                    <a href="https://dancacla.netlify.app" target="_blank" class="project_link demo">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Ver Demo</span>
+                    </a>
+                    <a href="https://github.com/PauloDiney/Danca" target="_blank" class="project_link code">
+                      <i class="fab fa-github"></i>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project_content">
+                <div class="project_header">
+                  <h3 class="project_name">Clara's Dance Studio</h3>
+                  <span class="project_status featured">Destaque</span>
+                </div>
+                <p class="project_description">
+                  Landing page moderna e responsiva para escola de dança. Design elegante com animações fluidas e experiência de usuário otimizada.
+                </p>
+                <div class="project_tech">
+                  <span class="tech_tag">HTML5</span>
+                  <span class="tech_tag">CSS3</span>
+                  <span class="tech_tag">JavaScript</span>
+                  <span class="tech_tag">Responsive</span>
+                </div>
+                <div class="project_stats">
+                  <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-code"></i>
+                    <span>Frontend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="project_image">
+                <img src="./img/sakura.png" alt="Sakura Restaurant" />
+                <div class="project_overlay">
+                  <div class="project_links">
+                    <a href="https://sakurajapanese.netlify.app" target="_blank" class="project_link demo">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Ver Demo</span>
+                    </a>
+                    <a href="https://github.com/PauloDiney/Sakura.git" target="_blank" class="project_link code">
+                      <i class="fab fa-github"></i>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project_content">
+                <div class="project_header">
+                  <h3 class="project_name">Sakura Restaurant</h3>
+                  <span class="project_status">Completo</span>
+                </div>
+                <p class="project_description">
+                  Website para restaurante japonês com tema autêntico, galeria de pratos e sistema de reservas integrado.
+                </p>
+                <div class="project_tech">
+                  <span class="tech_tag">HTML5</span>
+                  <span class="tech_tag">CSS3</span>
+                  <span class="tech_tag">JavaScript</span>
+                  <span class="tech_tag">UI/UX</span>
+                </div>
+                <div class="project_stats">
+                  <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-utensils"></i>
+                    <span>Food & Beverage</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="project_image">
+                <img src="./img/mainline.png" alt="Mainline Mobile" />
+                <div class="project_overlay">
+                  <div class="project_links">
+                    <a href="https://mainli.netlify.app" target="_blank" class="project_link demo">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Ver Demo</span>
+                    </a>
+                    <a href="https://github.com/PauloDiney/MA.INLINE" target="_blank" class="project_link code">
+                      <i class="fab fa-github"></i>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project_content">
+                <div class="project_header">
+                  <h3 class="project_name">Mainline Mobile</h3>
+                  <span class="project_status freelance">Freelance</span>
+                </div>
+                <p class="project_description">
+                  Primeiro trabalho como freelancer. Aplicação mobile-first focada na experiência do usuário em dispositivos móveis.
+                </p>
+                <div class="project_tech">
+                  <span class="tech_tag">Mobile First</span>
+                  <span class="tech_tag">CSS3</span>
+                  <span class="tech_tag">JavaScript</span>
+                  <span class="tech_tag">Progressive Web App</span>
+                </div>
+                <div class="project_stats">
+                  <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Cliente Real</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="project_image">
+                <img src="./img/serdigital.png" alt="SerDigital Marketing" />
+                <div class="project_overlay">
+                  <div class="project_links">
+                    <a href="https://serdigitall.netlify.app" target="_blank" class="project_link demo">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Ver Demo</span>
+                    </a>
+                    <a href="https://github.com/PauloDiney/SerDigital.git" target="_blank" class="project_link code">
+                      <i class="fab fa-github"></i>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project_content">
+                <div class="project_header">
+                  <h3 class="project_name">SerDigital Marketing</h3>
+                  <span class="project_status">Completo</span>
+                </div>
+                <p class="project_description">
+                  Landing page para agência de marketing digital com foco em conversão e apresentação de serviços.
+                </p>
+                <div class="project_tech">
+                  <span class="tech_tag">HTML5</span>
+                  <span class="tech_tag">CSS3</span>
+                  <span class="tech_tag">JavaScript</span>
+                  <span class="tech_tag">Marketing</span>
+                </div>
+                <div class="project_stats">
+                  <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Marketing Digital</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="project_image">
+                <img src="./img/bookstyle.png" alt="BookStyle E-commerce" />
+                <div class="project_overlay">
+                  <div class="project_links">
+                    <a href="https://github.com/M3NT0Sz/BookStyle" target="_blank" class="project_link code">
+                      <i class="fab fa-github"></i>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project_content">
+                <div class="project_header">
+                  <h3 class="project_name">BookStyle E-commerce</h3>
+                  <span class="project_status development">Em Desenvolvimento</span>
+                </div>
+                <p class="project_description">
+                  Projeto acadêmico de e-commerce para venda de livros. Desenvolvimento em equipe com foco em funcionalidades completas.
+                </p>
+                <div class="project_tech">
+                  <span class="tech_tag">React</span>
+                  <span class="tech_tag">Node.js</span>
+                  <span class="tech_tag">MySQL</span>
+                  <span class="tech_tag">E-commerce</span>
+                </div>
+                <div class="project_stats">
+                  <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2025</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span>Projeto em Equipe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="project_image">
+                <img src="./img/mount.png" alt="Mount Tourism" />
+                <div class="project_overlay">
+                  <div class="project_links">
+                    <a href="https://mountland.netlify.app" target="_blank" class="project_link demo">
+                      <i class="fas fa-external-link-alt"></i>
+                      <span>Ver Demo</span>
+                    </a>
+                    <a href="https://github.com/PauloDiney/Mount" target="_blank" class="project_link code">
+                      <i class="fab fa-github"></i>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project_content">
+                <div class="project_header">
+                  <h3 class="project_name">Mount Tourism</h3>
+                  <span class="project_status">Completo</span>
+                </div>
+                <p class="project_description">
+                  Landing page para turismo de montanha com design inspirado na natureza e experiência imersiva.
+                </p>
+                <div class="project_tech">
+                  <span class="tech_tag">HTML5</span>
+                  <span class="tech_tag">CSS3</span>
+                  <span class="tech_tag">JavaScript</span>
+                  <span class="tech_tag">Tourism</span>
+                </div>
+                <div class="project_stats">
+                  <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-mountain"></i>
+                    <span>Turismo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="projeto_item">
-            <img src="./img/mainline.png" alt="Projeto 3" />
-            <h3>Mainline</h3>
-            <p>Meu primeiro trabalho como freelance, desenvolvido para mobile</p>
-            <a target="_blank" href="https://mainli.netlify.app">Ver site</a>
-            <a target="_blank" href="https://github.com/PauloDiney/MA.INLINE">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-          <div class="projeto_item">
-            <img src="./img/instagram.png" alt="Projeto 4" />
-            <h3>Clone instagram</h3>
-            <p>Clonei a pagina de login do instagram!</p>
-            <a target="_blank" href="pauloinstaclone.netlify.app">Ver site</a>
-            <a target="_blank" href="https://github.com/PauloDiney/Clone-instagram>"
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-          <div class="projeto_item">
-            <img src="./img/bookstyle.png" alt="Projeto 5" />
-            <h3>bookstyle</h3>
-            <p>Projeto de faculdade, onde eu e meu parceiro estamos desenvolvendo um site de vendas de livros</p>
-            <a target="_blank" href="https://github.com/M3NT0Sz/BookStyle"
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-          <div class="projeto_item">
-            <img src="./img/mount.png" alt="Projeto 5" />
-            <h3>Mount</h3>
-            <p>Landing Page: Montanhas e Turismo</p>
-            <a target="_blank" href="https://mountland.netlify.app">Ver site</a>
-            <a target="_blank" href="https://github.com/PauloDiney/Mount"
-              <i class="fa-brands fa-github"></i>
+          
+          <div class="projects_cta">
+            <p>Gostou dos projetos? Vamos conversar sobre o seu!</p>
+            <a href="#contato" class="cta_button">
+              <i class="fas fa-comments"></i>
+              <span>Iniciar Conversa</span>
             </a>
           </div>
         </div>
       </section>
 
       <section id="contato" class="contato_container">
-        <h2 class="contato_title">Vamos fazer um projeto juntos? Mande uma menssagem :)</h2>
-        <div class="contato_info">
-          <div class="info_item">
-            <i class="fa fa-envelope"></i>
-            <p>Email: <a href="mailto:contato@seudominio.com">paulo19martin@gmail.com</a></p>
+        <div class="contato_content">
+          <div class="contato_header">
+            <h2 class="contato_title">Vamos Trabalhar Juntos?</h2>
+            <p class="contato_subtitle">
+              Transforme sua ideia em realidade digital. Entre em contato e vamos conversar sobre seu próximo projeto!
+            </p>
+          </div>
+
+          <div class="contato_wrapper">
+            <div class="contato_info">
+              <div class="info_card">
+                <div class="info_icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info_content">
+                  <h3>Email</h3>
+                  <a href="mailto:paulo19martin@gmail.com">paulo19martin@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="info_card">
+                <div class="info_icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="info_content">
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/paulodiney/" target="_blank">linkedin.com/in/paulodiney</a>
+                </div>
+              </div>
+
+              <div class="info_card">
+                <div class="info_icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="info_content">
+                  <h3>WhatsApp</h3>
+                  <a href="https://wa.me/5518996123456" target="_blank">+55 (18) 98110-4236</a>
+                  <small style="color: #aaa; font-size: 0.8rem; display: block; margin-top: 0.25rem;">
+                  </small>
+                </div>
+              </div>
+
+              <div class="info_card">
+                <div class="info_icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="info_content">
+                  <h3>GitHub</h3>
+                  <a href="https://github.com/PauloDiney" target="_blank">github.com/PauloDiney</a>
+                </div>
+              </div>
+            </div>
+
+            <form action="#" method="POST" class="contato_form">
+              <div class="form_group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+              </div>
+
+              <div class="form_group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              </div>
+
+              <div class="form_group">
+                <label for="telefone">Telefone/WhatsApp (opcional)</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" />
+              </div>
+
+              <div class="form_group">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Sobre o que você quer falar?" required />
+              </div>
+
+              <div class="form_group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-me mais sobre seu projeto ou ideia..." required></textarea>
+              </div>
+
+              <div class="contato_buttons">
+                <button type="submit" class="contato_btn primary" onclick="sendEmail(event)">
+                  <i class="fas fa-envelope"></i>
+                  <span>Enviar por Email</span>
+                </button>
+                
+                <button type="button" class="contato_btn secondary" onclick="sendWhatsApp(event)">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>Enviar pelo WhatsApp</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <form action="#" method="POST" class="contato_form">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-          <button type="submit" onclick="sendEmail(event)">Enviar Mensagem</button>
-        </form>
       </section>
 
       <footer class="footer_container">
-        <div class="footer_bottom">
+        <div class="footer_content">
+          <div class="footer_top">
+            <div class="footer_logo">
+              <img src="./img/logo.png" alt="Paulo Diney Logo" class="footer_logo_img">
+              <span class="footer_logo_text">Paulo Diney</span>
+            </div>
+            
+            <div class="footer_social">
+              <a href="https://github.com/PauloDiney" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/paulodiney/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/paulodiney/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer_divider"></div>
+
+          <div class="footer_bottom">
             <p>&copy; 2025 Paulo Diney. Todos os direitos reservados.</p>
+            <p class="footer_subtitle">Desenvolvedor Front-End apaixonado por criar experiências digitais incríveis.</p>
+          </div>
         </div>
       </footer>
     </main>
+    
+    <button class="btn_back" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
     <script src="app.js"></script>
-    <a class="btn_back" href="#home">^</a>
   </body>
 </html>
