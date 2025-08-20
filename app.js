@@ -214,7 +214,7 @@ function sendWhatsApp(event) {
     // Número do WhatsApp - ALTERE AQUI PARA SEU NÚMERO REAL
     // Formato: código do país + DDD + número (sem espaços, traços ou parênteses)
     // Exemplo: Brasil (55) + São Paulo (11) + 99999-9999 = 5511999999999
-    const phoneNumber = '5518996123456'; // ⚠️ ALTERE ESTE NÚMERO!
+    const phoneNumber = '5518981104236'; // ⚠️ ALTERE ESTE NÚMERO!
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
     
     window.open(whatsappLink, '_blank');
