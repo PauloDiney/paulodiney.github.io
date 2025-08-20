@@ -28,17 +28,39 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('nav-list');
     const navOverlay = document.getElementById('nav-overlay');
+    const body = document.body;
+    const menuNavLinks = navList.querySelectorAll('.nav-link');
     
     function toggleMenu() {
         hamburger.classList.toggle('active');
         navList.classList.toggle('show');
         navOverlay.classList.toggle('show');
+        body.classList.toggle('menu-open');
+        
+        // Animar itens do menu quando abre
+        if (navList.classList.contains('show')) {
+            menuNavLinks.forEach((link, index) => {
+                setTimeout(() => {
+                    link.style.animation = 'menuItemFadeIn 0.4s ease forwards';
+                }, index * 100);
+            });
+        } else {
+            menuNavLinks.forEach((link) => {
+                link.style.animation = '';
+            });
+        }
     }
     
     function closeMenu() {
         hamburger.classList.remove('active');
         navList.classList.remove('show');
         navOverlay.classList.remove('show');
+        body.classList.remove('menu-open');
+        
+        // Reset animations
+        menuNavLinks.forEach((link) => {
+            link.style.animation = '';
+        });
     }
     
     hamburger.addEventListener('click', toggleMenu);
